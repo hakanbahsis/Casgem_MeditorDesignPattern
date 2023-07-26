@@ -1,0 +1,56 @@
+﻿@model WebUI.MediatorPattern.Results.GetProductUpdateByIdQueryResult
+@{
+    ViewData["Title"] = "UpdateProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*
+<div class="container">
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Ürün Adı</th>
+            <th>Marka</th>
+            <th>Kategori</th>
+            <th>Stok</th>
+            <th>Fiyat</th>
+        </tr>         
+            <tr>
+                <td><label asp-for="Name"></label></td>
+                <td><label asp-for="Brand"></label></td>
+                <td><label asp-for="Category"></label></td>
+                <td><label asp-for="Stock"></label></td>
+                <td><label asp-for="Price"> ₺</label></td>
+            </tr>
+    </table>
+    <a href="/Default/Index/" class="btn btn-primary">Geri Dön</a>
+</div>*@
+
+
+
+<div class="container">
+    <form method="post">
+
+    
+    <br /><br />
+    
+    <input type="hidden" class="form-control" asp-for="Id" />
+    <br />
+    <label>Ürün Adı</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <br />
+    <label>Ürün Marka</label>
+    <input type="text" class="form-control" asp-for="Brand" />
+    <br />
+    <label>Ürün Kategori</label>
+    <input type="text" class="form-control" asp-for="Category" />
+    <br />
+    <label>Ürün Fiyat</label>
+    <input type="text" class="form-control" asp-for="Price" />
+    <br />
+    <label>Ürün Stok Sayısı</label>
+    <input type="text" class="form-control" asp-for="Stock" />
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+    </form>
+</div>

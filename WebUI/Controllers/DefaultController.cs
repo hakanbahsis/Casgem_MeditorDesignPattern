@@ -40,5 +40,21 @@ namespace WebUI.Controllers
             await _mediator.Send(new RemoveProductCommand(id));
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> UpdateProduct(int id)
+        {
+            var value = await _mediator.Send(new GetProductUpdateByIdQuery(id));
+            return View(value);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateProduct(UpdateProductCommand command)
+        {
+            await _mediator.Send(command);
+            return RedirectToAction("Index");
+        }
+
+     
     }
 }
